@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile | SportPath</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="profile-page">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">SportPath</a>
+        <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="sports.html">Sports</a>
+          <a href="careers.html">Careers</a>
+          <a href="academies.html">Academies</a>
+          <a href="scholarships.html">Scholarships</a>
+          <a href="news.html">News</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="profile.html" class="profile-link active"><span class="profile-icon" aria-hidden="true">&#128100;</span><span>Profile</span></a>
+        </nav>
+      </div>
+    </header>
+    <main class="page-shell">
+      <section class="container section">
+        <div class="section-heading">
+          <p class="eyebrow">Your account</p>
+          <h1>My Profile</h1>
+        </div>
+        <div class="about-card form-card profile-card">
+          <div class="profile-avatar profile-icon" aria-hidden="true">&#128100;</div>
+          <h2 id="profile-name">Your name</h2>
+          <p id="profile-email" class="hero-text">your@email.com</p>
+          <form id="profile-form" class="profile-form">
+            <label for="profile-phone">Phone</label>
+            <input id="profile-phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="Add your 10-digit phone number" />
+
+            <label for="profile-age">Age</label>
+            <input id="profile-age" type="number" min="1" max="120" placeholder="Add your age" />
+
+            <label for="profile-sport">Favourite sport</label>
+            <input id="profile-sport" type="text" placeholder="Add your favourite sport" />
+
+            <label for="profile-location">Location</label>
+            <input id="profile-location" type="text" placeholder="Add your city or state" />
+
+            <label for="profile-bio">About you</label>
+            <textarea id="profile-bio" rows="4" placeholder="Tell us about your sports goals"></textarea>
+
+            <button class="btn btn-primary" type="submit">Save Details</button>
+          </form>
+          <p id="profile-message" class="form-message"></p>
+          <button id="logout-button" class="btn btn-logout" type="button" aria-label="Log out of your SportPath account">
+            <span aria-hidden="true">&#10140;</span> Log out
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

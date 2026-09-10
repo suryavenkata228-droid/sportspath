@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login / Register | SportPath</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-page">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">SportPath</a>
+        <button class="menu-toggle" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="sports.html">Sports</a>
+          <a href="careers.html">Careers</a>
+          <a href="academies.html">Academies</a>
+          <a href="scholarships.html">Scholarships</a>
+          <a href="news.html">News</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html" class="nav-cta active">Login / Register</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="container section">
+        <div class="section-heading" style="text-align: center;">
+          <p class="eyebrow">Join the platform</p>
+          <h1 id="auth-title">Create your SportPath account</h1>
+        </div>
+        <div class="about-card form-card">
+          <form id="auth-form" novalidate>
+            <label for="name">Name</label>
+            <input id="name" type="text" placeholder="Enter your name" required />
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="Enter your email" required />
+
+            <label for="phone">Phone number</label>
+            <input id="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="Enter your 10-digit phone number" required />
+
+            <label for="password">Password</label>
+            <div class="password-field">
+              <input id="password" type="password" autocomplete="current-password" placeholder="Create a password" required />
+              <button class="password-toggle" type="button" data-target="password" aria-label="Show password" aria-pressed="false">Show</button>
+            </div>
+
+            <div class="auth-actions">
+              <button id="auth-submit" class="btn btn-primary" type="submit">Register</button>
+              <button id="forgot-password-button" class="auth-switch auth-forgot" type="button">Forgot password?</button>
+            </div>
+          </form>
+          <p id="form-message" class="form-message"></p>
+          <button id="auth-switch" class="auth-switch" type="button">Already have an account? Login</button>
+        </div>
+      </section>
+    </main>
+
+    <div id="details-modal" class="details-modal" role="dialog" aria-modal="true" aria-labelledby="details-modal-title" hidden>
+      <div class="details-modal-content">
+        <h2 id="details-modal-title">Please enter your user details</h2>
+        <p>Complete your name, email, 10-digit phone number, and password before registering.</p>
+        <button id="details-modal-close" class="btn btn-primary" type="button">Continue</button>
+      </div>
+    </div>
+
+    <div id="forgot-password-modal" class="details-modal" role="dialog" aria-modal="true" aria-labelledby="forgot-password-title" hidden>
+      <div class="details-modal-content reset-password-card">
+        <h2 id="forgot-password-title">Reset your password</h2>
+        <p class="reset-password-intro">Verify your account details, then create a new password.</p>
+        <form id="forgot-password-form" class="reset-password-form">
+          <div class="reset-field">
+            <label for="reset-email">Email</label>
+            <input id="reset-email" type="email" autocomplete="email" placeholder="Enter your registered email" required />
+          </div>
+
+          <div class="reset-field">
+            <label for="reset-phone">Phone number</label>
+            <input id="reset-phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9]{10}" maxlength="10" placeholder="Enter your registered phone" required />
+          </div>
+
+          <div class="reset-field">
+            <label for="reset-password">New password</label>
+            <div class="password-field">
+              <input id="reset-password" type="password" autocomplete="new-password" minlength="6" placeholder="Create a new password" required />
+              <button class="password-toggle" type="button" data-target="reset-password" aria-label="Show new password" aria-pressed="false">Show</button>
+            </div>
+          </div>
+
+          <div class="reset-field">
+            <label for="reset-password-confirmation">Confirm new password</label>
+            <div class="password-field">
+              <input id="reset-password-confirmation" type="password" autocomplete="new-password" minlength="6" placeholder="Repeat your new password" required />
+              <button class="password-toggle" type="button" data-target="reset-password-confirmation" aria-label="Show password confirmation" aria-pressed="false">Show</button>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Reset Password</button>
+        </form>
+        <p id="forgot-password-message" class="form-message"></p>
+        <button id="forgot-password-close" class="auth-switch" type="button">Cancel</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
